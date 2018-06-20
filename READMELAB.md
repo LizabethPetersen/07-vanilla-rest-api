@@ -51,7 +51,7 @@ When a client makes a GET request to / the server should send back html with a p
 ```
 
 ###### GET /cowsay?text={message}
-When a client makes a GET request to /cowsay?text={message} the server should parse the querystring for a text key. It should then send a rendered HTML page with a cowsay cow speaking the value of the text query. If their is no text query the cow message should be a random string taken from the `Faker` package. Don't know how to use the `Faker` package? Be a resourceful developer and figure it out [here](https://www.npmjs.com/package/faker).
+When a client makes a GET request to /cowsay?text={message} the server should parse the querystring for a text key. It should then send a rendered HTML page with a cowsay cow speaking the value of the text query. If there is no text query, the cow message should be a random string taken from the `Faker` package. Don't know how to use the `Faker` package? Be a resourceful developer and figure it out [here](https://www.npmjs.com/package/faker).
 ``` html
 <!DOCTYPE html>
 <html>
