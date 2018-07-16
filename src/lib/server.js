@@ -33,13 +33,13 @@ const app = http.createServer((req, res) => {
         return undefined;
       }
 
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
+      res.writeHead(400, { 'Content-Type': 'text/plain' });
       res.write('Not Found');
       res.end();
       return undefined;
     })
     .catch((err) => {
-      res.writeHead(400, { 'Content-Type': 'text/plain' });
+      res.writeHead(404, { 'Content-Type': 'text/plain' });
       console.log(err); /* eslint-disable-line */
       res.write('Bad Request');
       res.end();

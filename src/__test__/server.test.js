@@ -2,7 +2,7 @@
 
 const server = require('../lib/server');
 const superagent = require('superagent');
-const cowsay = require('cowsay');
+// const cowsay = require('cowsay');
 
 const apiUrl = 'http://localhost:5000/api';
 
@@ -17,19 +17,6 @@ describe('VALID REQUESET TO THE API', () => {
           expect(res.status).toEqual(200);
           expect(res.body).toHaveProperty('date');
           done();
-        });
-    });
-  });
-
-  describe('GET /cowsayPage', () => {
-    const mockCow = cowsay.say({ text: 'Hello World' });
-    const mockHtml = `<section><h3><a href="api/time">Click here for current time</a></h3><pre>${mockCow}</pre></section>`;
-    test('Should respond with a 200 status and return cow HTML', () => {
-      return superagent.get(`${apiUrl}/cowsayPage`)
-        .query({ text: 'Hello World' })
-        .then((res) => {
-          expect(res.status).toEqual(200);
-          expect(res.text).toEqual(mockHtml);
         });
     });
   });
